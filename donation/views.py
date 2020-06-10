@@ -9,7 +9,7 @@ def index(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             amount = form.cleaned_data['amount']
-            donation = Donation(name = name, amount = amount)
+            donation = Donation(name = name, amount = amount, is_donated = True)
             donation.save()
 
             context = {
