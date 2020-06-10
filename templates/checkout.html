@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Add meta tags for mobile and IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+     <h1>Submit Your Donation Here </h1>
+    <form action="{% url 'index' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+    <input type="submit" value="Submit">
+    </form>
+
+</body>
+    
